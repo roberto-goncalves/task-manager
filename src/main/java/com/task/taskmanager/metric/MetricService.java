@@ -15,18 +15,19 @@ import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 @Service
 public class MetricService {
+
     @Autowired
     MongoConfig mongoConfig;
 
     public List<MetricCount> selectAndGroup() throws Exception{
         Aggregation agg = newAggregation(
-                group("method").count().as("total"),
-                project("total").and("method").previousOperation()
+                group("method", "route").count().as("total")
+                        .sum("time").as("time"),
+                project("_id.method","route","time","total").and("time").divide("total").as("average")
         );
 
-        //Convert the aggregation result into a List
         AggregationResults<MetricCount> groupResults = mongoConfig.mongoTemplate().aggregate(agg,Metric.class, MetricCount.class);
-        List<MetricCount> result = groupResults.getMappedResults();
-        return result;
+        List<MetricCount> result_method = groupResults.getMappedResults();
+        return result_method;
     }
 }
