@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping(path="/metrics", produces= MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(path="/taskmetrics", produces= MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class MetricController {
 
     @Autowired

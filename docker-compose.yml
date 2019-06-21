@@ -1,0 +1,36 @@
+version: '3'
+services:
+  taskmanager:
+    container_name: task_manager
+    build:
+      context: .
+      dockerfile: dockerfile_taskmanager
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.8
+    ports:
+      - 8080:8080
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.7
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+      - subnet: 10.5.0.0/16

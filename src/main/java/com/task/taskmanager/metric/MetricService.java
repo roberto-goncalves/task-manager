@@ -25,7 +25,6 @@ public class MetricService {
                         .sum("time").as("time"),
                 project("_id.method","route","time","total").and("time").divide("total").as("average")
         );
-
         AggregationResults<MetricCount> groupResults = mongoConfig.mongoTemplate().aggregate(agg,Metric.class, MetricCount.class);
         List<MetricCount> result_method = groupResults.getMappedResults();
         return result_method;
