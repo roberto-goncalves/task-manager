@@ -12,6 +12,7 @@
 - The configuration for mongodb connection is on config/MongoConfig.java, if you have a database accessed to localhost for example, just change there. The default value is mongodb:27017 (used in docker-compose)
 - The MetricFilter class will gather every request made to the api, and save it on mongodb
 - Integration tests is on src/tests
+- The logging is configured also on MetricFilter
 
 3 - Compile & Use API:
 
