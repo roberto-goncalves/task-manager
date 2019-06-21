@@ -33,7 +33,6 @@ To run with docker-compose: docker-compose up (need to be on same folder as dock
 - DELETE /todo/ - Delete all tasks
 - DELETE /todo/(taskId) - Delete specific task
 
-/todo
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"id":"1","description":"mytask"}' http://localhost:8080/todo/
 
@@ -57,7 +56,7 @@ curl -X DELETE -H "Content-type: application/json" http://localhost:8080/todo/2
 
 curl -X DELETE -H "Content-type: application/json" http://localhost:8080/todo/
 ```
-TASK - METRIC
+Task Metric
 
 - GET /taskmetrics/ - Will return every request made to the API
 - GET /taskmetrics/stats - Will return a statistic metric for every request made, those metrics are: totaltime, totalcount and average response time in ms
@@ -210,7 +209,6 @@ curl -X GET -H "Content-type: application/json" http://localhost:8080/taskmetric
 ]
 ```
 ACTUATOR
-/actuator/
 
 - /actuator/auditevents - Exposes audit events (e.g. auth_success, order_failed) for your application
 - /actuator/info - Displays information about application.
