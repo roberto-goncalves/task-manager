@@ -25,12 +25,12 @@ To run with docker-compose: docker-compose up (need to be on same folder as dock
 
 4 - Using the API:
 
-POST /TODO/ - Insert new todo task
-PUT /TODO/  - Update existing task
-GET /TODO/  - Get all tasks
-GET /TODO/<taskId>  - Get specific task
-DELETE /TODO/ - Delete all tasks
-DELETE /TODO/<taskId> - Delete specific task
+- POST /TODO/ - Insert new todo task
+- PUT /TODO/  - Update existing task
+- GET /TODO/  - Get all tasks
+- GET /TODO/<taskId>  - Get specific task
+- DELETE /TODO/ - Delete all tasks
+- DELETE /TODO/<taskId> - Delete specific task
 
 /todo
 ```bash
@@ -58,8 +58,8 @@ curl -X DELETE -H "Content-type: application/json" http://localhost:8080/todo/
 ```
 TASK - METRIC
 
-GET /taskmetrics/ - Will return every request made to the API
-GET /taskmetrics/stats - Will return a statistic metric for every request made, those metrics are: totaltime, totalcount and average response time in ms
+- GET /taskmetrics/ - Will return every request made to the API
+- GET /taskmetrics/stats - Will return a statistic metric for every request made, those metrics are: totaltime, totalcount and average response time in ms
 
 ```bash
 curl -X GET -H "Content-type: application/json" http://localhost:8080/taskmetrics/
