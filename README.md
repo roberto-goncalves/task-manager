@@ -211,21 +211,21 @@ curl -X GET -H "Content-type: application/json" http://localhost:8080/taskmetric
 ACTUATOR
 /actuator/
 
-/actuator/auditevents - Exposes audit events (e.g. auth_success, order_failed) for your application
-/actuator/info - Displays information about application.
-/actuator/health - Displays application’s health status.
-/actuator/metrics - Shows various metrics information of application.
-/actuator/loggers -	Displays and modifies the configured loggers.
-/actuator/logfile -	Returns the contents of the log file (if logging.file or logging.path properties are set.)
-/actuator/httptrace -	Displays HTTP trace info for the last 100 HTTP request/response.
-/actuator/env - Displays current environment properties.
-/actuator/flyway - Shows details of Flyway database migrations.
-/actuator/liquidbase - Shows details of Liquibase database migrations.
-/actuator/shutdown - Lets you shut down the application gracefully.
-/actuator/mappings - Displays a list of all @RequestMapping paths.
-/actuator/scheduledtasks - Displays the scheduled tasks in your application.
-/actuator/threaddump - Performs a thread dump.
-/actuator/heapdump - Returns a GZip compressed JVM heap dump
+- /actuator/auditevents - Exposes audit events (e.g. auth_success, order_failed) for your application
+- /actuator/info - Displays information about application.
+- /actuator/health - Displays application’s health status.
+- /actuator/metrics - Shows various metrics information of application.
+- /actuator/loggers -	Displays and modifies the configured loggers.
+- /actuator/logfile -	Returns the contents of the log file (if logging.file or logging.path properties are set.)
+- /actuator/httptrace -	Displays HTTP trace info for the last 100 HTTP request/response.
+- /actuator/env - Displays current environment properties.
+- /actuator/flyway - Shows details of Flyway database migrations.
+- /actuator/liquidbase - Shows details of Liquibase database migrations.
+- /actuator/shutdown - Lets you shut down the application gracefully.
+- /actuator/mappings - Displays a list of all @RequestMapping paths.
+- /actuator/scheduledtasks - Displays the scheduled tasks in your application.
+- /actuator/threaddump - Performs a thread dump.
+- /actuator/heapdump - Returns a GZip compressed JVM heap dump
 
 ```bash
 curl -X GET -H "Content-type: application/json" http://localhost:8080/actuator/info
