@@ -26,12 +26,12 @@ To run with docker-compose: docker-compose up (need to be on same folder as dock
 
 4 - Using the API:
 
-- POST /TODO/ - Insert new todo task
-- PUT /TODO/  - Update existing task
-- GET /TODO/  - Get all tasks
-- GET /TODO/<taskId>  - Get specific task
-- DELETE /TODO/ - Delete all tasks
-- DELETE /TODO/<taskId> - Delete specific task
+- POST /todo/ - Insert new todo task
+- PUT /todo/  - Update existing task
+- GET /todo/  - Get all tasks
+- GET /todo/(taskId)  - Get specific task
+- DELETE /todo/ - Delete all tasks
+- DELETE /todo/(taskId) - Delete specific task
 
 /todo
 ```bash
