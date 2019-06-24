@@ -14,6 +14,7 @@
 - Integration tests is on src/tests
 - The logging is configured also on MetricFilter
 - The Health and Info functions is inside Actuator
+- Before running on Docker, verify if the desired jar is on target folder.
 
 3 - Compile & Use API:
 
