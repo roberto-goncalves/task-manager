@@ -13,6 +13,7 @@
 - The MetricFilter class will gather every request made to the api, and save it on mongodb
 - Integration tests is on src/tests
 - The logging is configured also on MetricFilter
+- The Health and Info functions is inside Actuator
 
 3 - Compile & Use API:
 
@@ -208,7 +209,7 @@ curl -X GET -H "Content-type: application/json" http://localhost:8080/taskmetric
    }
 ]
 ```
-ACTUATOR
+Actuator
 
 - /actuator/auditevents - Exposes audit events (e.g. auth_success, order_failed) for your application
 - /actuator/info - Displays information about application.
